@@ -70,7 +70,7 @@ public class PedidoController {
 					.entity("Pedidos cadastrados com sucesso.").build();
 		} catch (Exception e) {
 			return Response.status(RequestResponseStatusEnum.INTERNAL_ERROR.getStatus())
-					.entity("Erro ao cadastrar lista de pedidos.\n" + e.getLocalizedMessage()).build();
+					.entity("Erro ao cadastrar lista de pedidos.").build();
 		}
 	}
 	

@@ -11,8 +11,12 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import br.com.apolomcmelo.generics.GenericEntity;
+import org.codehaus.jackson.annotate.JsonAutoDetect;
+import org.codehaus.jackson.map.annotate.JsonDeserialize;
 
+import br.com.apolomcmelo.generics.GenericEntity;
+import br.com.apolomcmelo.util.JsonDateDeserializer;
+@JsonAutoDetect
 @Entity
 @Table(name = "pedido")
 @XmlRootElement
@@ -25,7 +29,7 @@ public class Pedido implements GenericEntity {
 	private Long codigoCliente;
 
 	@Column(name = "data_cadastro")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataCadastro;
 
 	@Column(name = "nome_produto")
@@ -59,11 +63,12 @@ public class Pedido implements GenericEntity {
 	public void setCodigoCliente(Long codigoCliente) {
 		this.codigoCliente = codigoCliente;
 	}
-
+	
 	public Date getDataCadastro() {
 		return dataCadastro;
 	}
 
+	@JsonDeserialize(using = JsonDateDeserializer.class)
 	public void setDataCadastro(Date dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
