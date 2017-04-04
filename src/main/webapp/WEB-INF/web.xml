@@ -23,7 +23,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>API Rest - Tecnogroup - Apolo Mc Melo</servlet-name>
+		<servlet-name>API Rest - Teste Tecnogroup - Apolo Mc Melo</servlet-name>
 		<url-pattern>/tecnogroupteste/*</url-pattern>
 	</servlet-mapping>
 </web-app>

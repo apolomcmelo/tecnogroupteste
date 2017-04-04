@@ -1,4 +1,4 @@
-package br.com.apolomcmelo.daos;
+package br.com.apolomcmelo.daos.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,10 +9,11 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import br.com.apolomcmelo.daos.PedidoDAO;
 import br.com.apolomcmelo.generics.GenericDAO;
 import br.com.apolomcmelo.models.Pedido;
 
-public class ProdutoDAO extends GenericDAO<Pedido> {
+public class PedidoDAOImpl extends GenericDAO<Pedido> implements PedidoDAO {
 
 	/**
 	 * Retorna uma lista de Pedidos baseada nos parâmetros informados

@@ -3,11 +3,11 @@ package br.com.apolomcmelo.services;
 import java.util.Date;
 import java.util.List;
 
-import br.com.apolomcmelo.daos.ProdutoDAO;
+import br.com.apolomcmelo.daos.impl.PedidoDAOImpl;
 import br.com.apolomcmelo.models.Pedido;
 
 public class PedidoService {
-	private ProdutoDAO dao = new ProdutoDAO();
+	private PedidoDAOImpl dao = new PedidoDAOImpl();
 	
 	/**
 	 * Cadastra uma lista de pedidos

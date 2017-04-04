@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.apolomcmelo</groupId>
-	<artifactId>tecnogroup.prova</artifactId>
+	<artifactId>tecnogroupteste</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tecnogroup.prova Maven Webapp</name>
+	<name>Tecnogroup Teste - Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
@@ -62,7 +62,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>tecnogroup.prova</finalName>
+		<finalName>tecnogroupteste</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
@@ -71,6 +71,8 @@
 				<configuration>
 					<path>/</path>
 					<port>8080</port>
+                    <source>1.8</source>
+                    <target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>

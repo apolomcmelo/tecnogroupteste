@@ -22,7 +22,7 @@ import br.com.apolomcmelo.services.PedidoService;
 @Path("/pedido")
 public class PedidoController {
 	private static final int MAX_LIMIT_ORDERS = 10;
-	private PedidoService service;
+	private PedidoService service = new PedidoService();
 
 	// Serviços expostos
 	@GET
